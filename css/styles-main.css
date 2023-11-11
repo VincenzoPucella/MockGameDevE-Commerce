@@ -1,0 +1,387 @@
+ /* This file is being accessed by Index.HTML, Login.HTML, Home.HTML */
+ /*---------------------------------------------- */
+
+ /* Generic Resets */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+body, h1, h2, h3, p, ul, li, button, a {
+    font-family: Arial, sans-serif;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+   
+}
+/*---------------------------------------------- */
+
+button, #submitBtn {
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 10px 15px;
+    transition: background-color 1s;
+}
+
+button:hover, #submitBtn:hover {
+    background-color: #555;
+}
+
+header {
+    align-items: center;
+    background-color: white;
+    color: white; /* Changed to black for visibility against white background */
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px;
+}
+
+/*---------------------------------------------- */
+  
+/* Apply movement to elements */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes colorTic {
+    0% {
+        color: rgba(255, 255, 255, 0.5); /* Transparent white */
+        padding: 5px 5px;
+    }
+    100% {
+        color: rgba(0, 0, 0, 0.5); /* Transparent black */
+        padding: 5px 5px;
+    }
+ }
+
+ @keyframes moveAround {
+    0% { top: 30%; left: 20%; }
+    25% { top: 10%; left: 80%; }
+    50% { top: 60%; left: 70%; }
+    75% { top: 50%; left: 10%; }
+    100% { top: 30%; left: 20%; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(-50%, -50%) translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(-50%, -50%) translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translate(-50%, -50%) translateX(10px); }
+}
+/*---------------------------------------------- */
+ /* My Page Title */
+#fishTank {
+    flex-grow: 2;                     /* Allow the title to grow and take up all available space */
+    border: none;
+    color: white;
+    margin-left: 20px;
+    height: 30px;
+    cursor: pointer;
+    transition: color 1s;
+    font-size: 24px;
+    font-weight: bold;
+    animation: colorTic 1s infinite alternate; /* Corrected animation syntax */
+    display: flex;
+}
+
+#fishTank:hover {
+    opacity: 1;
+    animation-play-state: paused; /* Stops the animation when hovered */
+  
+}
+
+/*---------------------------------------------- */
+#image-container {
+     height: 80px;
+     width: 100px;
+     right: 75px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position:relative; 
+     overflow: hidden; 
+
+}
+
+.stacked-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    
+}
+
+.centerContainer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    position: absolute;      /* Absolute positioning relative to its closest positioned ancestor */
+    top: 50%;                /* Positioning from the top half of the parent container */
+    left: 50%;               /* Positioning from the left half of the parent container */
+    transform: translate(-50%, -50%); /* Adjust the element's position to center it perfectly */
+    z-index: 1000;           /* Ensures the container stays on top */
+}
+
+/*---------------------------------------------- */
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
+
+nav button {
+    margin-left: 5px; /* Spacing between buttons */
+    margin-right: 5px;
+    width: 100px;
+    height: 40px;
+}
+
+/*---------------------------------------------- */
+
+
+.Container-Footer {
+    clear: both;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.Element-Effects a {
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    background-color: transparent; /* Ensure no background */
+}
+
+.Container-Footer .Element-Effects {
+    display: flex;          /* Use flexbox to layout the links */
+    justify-content: space-between; /* Evenly space the links */
+}
+
+.Container-Footer .Element-Effects a {
+    color: white; /* Ensure links are white */
+    margin-right: 10px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.Container-Footer .Element-Effects a:hover {
+    background-color: #333; /* Your footer's background color */
+}
+
+main {
+    background: radial-gradient(circle, rgba(255,0,0,0.8), rgba(0,255,0,0.8), rgba(0,0,255,0.8));
+    position: relative;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+/* Add transition to the footer's children */
+footer > * {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* On hover, shift the footer's children to the left by 30px */
+footer:hover > * {
+    transform: translateX(-30px);
+}
+
+
+.footer-logo {
+    display: block; /* To ensure the image takes the full space of the anchor */
+    width: 40px; /* Change this based on your preference */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Spacing between logos */
+    background-color: transparent; /* Ensure no background */
+    border: none; /* Remove any borders */
+}
+.Element-Effects a:last-child .footer-logo {
+    margin-right: 0; /* Ensure the last logo doesn't have extra space on the right */
+}
+
+/*---------------------------------------------- */
+
+
+#staticImage {
+    display: block;
+    margin: 0 auto;
+    max-height: 100vh;  /* Set maximum height to 100% of the viewport height */
+    width: auto;        /* Auto adjust the width to maintain the aspect ratio */
+}
+
+#staticImageContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: hidden; /* Hide anything that goes outside the container */
+}
+
+#staticImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire viewport */
+}
+
+#staticImageContainer::before, 
+#staticImageContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10%; /* Width of the blur */
+    height: 100%;
+    background: inherit;
+    z-index: 1; /* Place it above the image but below the text */
+    pointer-events: none; /* Ensure it doesn't interfere with user interactions */
+    backdrop-filter: blur(8px); /* Apply the blur */
+}
+
+#staticImageContainer::before {
+    left: 0;
+    transform: scaleX(-1); /* Mirror the left side for the right side */
+}
+
+#staticImageContainer::after {
+    right: 0;
+}
+
+/*---------------------------------------------- */
+
+.indexCenterText {
+    font-family:'Times New Roman', Times, serif;
+    position: absolute;
+    z-index: 2; /* Ensures the text is on top */
+    color: white;
+    background-color: rgba(64, 64, 64, 0.7); /* Optional: Dark transparent background */
+    padding: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: moveAround 10s infinite;
+}
+
+.indexCenterText:hover {
+    transform: scale(1.5); /* Enlarge text slightly when hovered */
+    background: rgba(255, 255, 255, 0.388); /* Change color to green when hovered */
+}
+
+#loginFormContainer {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;   /* or your desired width */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 15px;
+    z-index: 10;
+}
+
+#prevArrow {
+    left: 0;
+}
+
+#nextArrow {
+    right: 0;
+}
+
+/*---------------------------------------------- */
+
+
+.shake {
+    animation: shake 0.5s;  /* Adjust 0.5s for the shake duration */
+}
+
+
+.blurry-transition {
+    filter: blur(10px);
+    transition: filter 3s ease-out;
+}
+
+#dynamicBackgroundPicture {
+    position: relative;  /* Ensure child elements are positioned relative to this container */
+    width: 100%;
+    height: 500px;  /* You can adjust this based on your image size and preference */
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
+.home-page .dynamicBackgroundPicture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Initially images are hidden */
+    overflow: hidden;
+}
+
+.home-page .dynamicBackgroundPicture:first-child {
+    display: block; /* Only first image is shown initially */
+}
+
+#coverOneContainer img, #coverTwoContainer img, #coverThreeContainer img {
+    width: 100%;
+    height: auto;
+}
+
+#coverOneContainer, #coverTwoContainer, #coverThreeContainer {
+    position: absolute;
+    width: 20%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.home-page #coverOneContainer {
+    left: 5%;
+    top: 35%; /* Adjust to position it */
+}
+
+.home-page #coverTwoContainer {
+    right: 5%;
+    top: 35%; /* Adjust to position it */
+}
+
+.home-page #coverThreeContainer {
+    left: 40%;
+    top: 35%; /* Adjust to position it */
+}
+
+/*---------------------------------------------- */
+

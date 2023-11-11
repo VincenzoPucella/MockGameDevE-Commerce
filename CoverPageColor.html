@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Home Page</title>
+    <link rel="stylesheet" href="css/styles-store.css">
+</head>
+
+<body>
+
+    <!-- Background image that is blurred out -->
+    <header style="background-image: url('https://via.placeholder.com/150')">
+    </header>
+
+    <!-- Create a textbox with a search button to navigate to my 6 containers -->
+    <div>
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+
+    <!-- Create 6 containers -->
+    <div class="container-row">
+        <div class="container">
+            <img src="https://via.placeholder.com/150" alt="Container 1">
+            <p>Name: Container 1</p>
+            <p>Genre: Action</p>
+            <p>Price: $19.99</p>
+            <p>Description: Description for Container 1</p>
+            <button onclick="window.scrollTo(0,0)">Back to Top</button>
+            <button onclick="addToCart('Container 1', 19.99)">Add to Cart</button>
+        </div>
+        <div class="container">
+            <img src="https://via.placeholder.com/150" alt="Container 2">
+            <p>Name: Container 2</p>
+            <p>Genre: Adventure</p>
+            <p>Price: $24.99</p>
+            <p>Description: Description for Container 2</p>
+            <button onclick="window.scrollTo(0,0)">Back to Top</button>
+            <button onclick="addToCart('Container 2', 24.99)">Add to Cart</button>
+        </div>
+        <div class="container">
+            <img src="https://via.placeholder.com/150" alt="Container 3">
+            <p>Name: Container 3</p>
+            <p>Genre: Puzzle</p>
+            <p>Price: $14.99</p>
+            <p>Description: Description for Container 3</p>
+            <button onclick="window.scrollTo(0,0)">Back to Top</button>
+            <button onclick="addToCart('Container 3', 14.99)">Add to Cart</button>
+        </div>
+        <div class="container">
+            <img src="https://via.placeholder.com/150" alt="Container 4">
+            <p>Name: Container 4</p>
+            <p>Genre: Racing</p>
+            <p>Price: $29.99</p>
+            <p>Description: Description for Container 4</p>
+            <button onclick="window.scrollTo(0,0)">Back to Top</button>
+            <button onclick="addToCart('Container 4', 29.99)">Add to Cart</button>
+        </div>
+        <div class="container">
+            <img src="https://via.placeholder.com/150" alt="Container 5">
+            <p>Name: Container 5</p>
+            <p>Genre: Sports</p>
+            <p>Price: $39.99</p>
+            <p>Description: Description for Container 5</p>
+            <button onclick="window.scrollTo(0,0)">Back to Top</button>
+            <button onclick="addToCart('Container 5', 39.99)">Add to Cart</button>
+        </div>
+        <div class="container">
+            <img src="https://via.placeholder.com/150" alt="Container 6">
+            <p>Name: Container 6</p>
+            <p>Genre: Strategy</p>
+            <p>Price: $34.99</p>
+            <p>Description: Description for Container 6</p>
+            <button onclick="window.scrollTo(0,0)">Back to Top</button>
+            <button onclick="addToCart('Container 6', 34.99)">Add to Cart</button>
+        </div>
+    </div>
+
+    
+    <script>
+        // Step 1
+        let cart = [];
+
+        function addToCart(name, price) {
+            // Step 2
+            cart.push({name, price});
+
+            // Step 4
+            displayTotalPrice();
+            displayCartItems();
+        }
+
+        // Step 3
+        function calculateTotalPrice() {
+            let totalPrice = 0;
+            for (let i = 0; i < cart.length; i++) {
+                totalPrice += cart[i].price;
+            }
+            return totalPrice;
+        }
+
+        // Step 5
+        function displayCartItems() {
+            let cartItems = "";
+            for (let i = 0; i < cart.length; i++) {
+                cartItems += `<p>${cart[i].name}: $${cart[i].price}</p>`;
+            }
+            document.getElementById("cart-items").innerHTML = cartItems;
+        }
+
+        // Step 4
+        function displayTotalPrice() {
+            let totalPrice = calculateTotalPrice();
+            document.getElementById("total-price").innerHTML = `Total Price: $${totalPrice}`;
+        }
+    </script>
+
+    
+
+    <!-- Add a link to a new JS file called script_store.JS -->
+    <script src="js/script_store.js"></script>
+
+</body>
+
+</html>

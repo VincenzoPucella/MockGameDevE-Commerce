@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalize Payment</title>
+    <link rel="stylesheet" href="css/styles-invoice.css">
+</head>
+
+<body>
+
+<header>
+ <!-- I would need to get information from another HTML page -->
+ <!-- Finalize the cart (Display information)-->
+    <div class="cart-summary">
+     <h2>Cart Summary</h2>
+        <ul id="cart-products">
+        <!-- Product items will be injected here by JS -->
+        </ul>
+        <p>Total: <span id="cart-total">$0.00</span></p>
+    </div>
+</header>
+
+ <!-- Shipping Address -->
+<div class="shipping-address">
+    <!-- This container will be placed on the left side of the entire main(container) -->
+  <h2>Shipping Address</h2>
+    <label for="home">Home:</label>
+    <input type="text" id="home" required>
+
+    <label for="address1">Address Line 1:</label>
+    <input type="text" id="address1" required>
+
+    <label for="address2">Address Line 2:</label>
+    <input type="text" id="address2">
+
+    <label for="city">City:</label>
+    <input type="text" id="city" required>
+
+    <label for="postal-code">Postal Code:</label>
+    <input type="text" id="postal-code" required>
+
+    <label for="province">Province:</label>
+    <input type="text" id="province" required>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" required>
+</div>
+
+ <!-- Credit card information -->
+<div class="credit-card-info">
+    <h2>Payment Information</h2>
+
+    <label for="card-name">Name on Card:</label>
+    <input type="text" id="card-name" required>
+
+    <label for="card-number">Credit Card Number:</label>
+    <input type="text" id="card-number" required>
+
+    <label for="card-cvc">CVC:</label>
+    <input type="text" id="card-cvc" required>
+
+    <label for="card-expiration">Expiration Date (MM/YY):</label>
+    <input type="text" id="card-expiration" required>
+
+    <button id="clear-card-info">Clear</button>
+</div>
+
+<!-- Confirm button -->
+<button id="confirm-button">Confirm Payment</button>
+
+<script src="vanillaJS/scripts-invoice.JS"></script>
+</body>
+
+</html>

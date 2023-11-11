@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Login Page</title>
+    <link rel="stylesheet" href="css/styles-main.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Branding Text -->
+        <div class="Container-Effect">
+            <div id="fishTank">MY VIDEO GAME GALLARY</div>
+        </div>
+       
+        
+        <div id="image-container">
+            <img src="Images/MyBrandLogo/LogoBase.webp">
+        </div>
+        
+        <!-- Navigation buttons -->
+        <!-- Using bootstrap to convert this into a dropdown when minimized -->
+        <nav>
+            <button id="indexBtn">Home</button>
+            <button id="languageToggleBtn">ENG</button>
+        </nav>
+    </header>
+    
+    <main>
+         
+        <!-- Uses a static image to not distract the user -->
+        <div id="staticImageContainer">
+        <img src="Images/MyBrandLogo/Gallary.webp" alt="Background Image" id="staticImage">
+        
+        <!-- Javascript handels validation ect... Scroll down for link -->
+        <div id="loginFormContainer">
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
+        </div>
+
+        </div>
+    
+        <footer class="Container-Footer">
+            <div class="Element-Effects">
+                <a href="#" target="_blank"><img src="Images/FooterIcons/Facebook.jpg" alt="Facebook" class="footer-logo"></a>
+                <a href="#" target="_blank"><img src="Images/FooterIcons/Google.jpg" alt="Google+" class="footer-logo"></a>
+                <a href="#" target="_blank"><img src="Images/FooterIcons/Skype.jpg" alt="Skype" class="footer-logo"></a>
+                <a href="#" target="_blank"><img src="Images/FooterIcons/Instagram.jpg" alt="Instagram" class="footer-logo"></a>
+            </div>
+        </footer>
+        
+
+    </main>
+    
+    <script src="vanillaJS/script-Main.JS"></script>
+    <script src="vanillaJS/script-Validation.JS"></script>
+
+
+</body>
+
+</html>

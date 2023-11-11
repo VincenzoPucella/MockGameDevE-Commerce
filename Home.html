@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Home Page</title>
+    <link rel="stylesheet" href="css/styles-main.css">
+</head>
+
+<body class="home-page">
+
+
+    <header>
+
+        <!-- Branding Text -->
+        <div class="Container-Effect">
+            <div id="fishTank">MY VIDEO GAME GALLARY</div>
+        </div>
+       
+
+
+        <!-- Navigation buttons -->
+        <!-- Using bootstrap to convert this into a dropdown when minimized -->
+        <nav>
+            <button id="indexBtn">Home</button>
+            <button id="languageToggleBtn">FR</button>
+            <button id="loginBtn">Login</button>
+                <!-- Place under these buttons and leave some padding -->
+                <button id="viewShopPriceBtn">Pre-order my Games (color) </button>
+                <button id="viewShopDetailsBtn">Pre-order my Games (Black/White)</button>
+                <button id="invoiceBtn"> Check your cart </button>
+         
+        </nav>
+
+         <!-- Arrows for Manual Image Switching -->
+         <button id="prevArrow" class="arrow">&#8592;</button>
+         <button id="nextArrow" class="arrow">&#8594;</button>
+
+    </header>
+    
+    <main>
+         <!-- Creating light effects using my cover images -->
+         <div id="dynamicBackgroundPicture">
+            <img src="Images/ChessFPSCollection/Gameplay.webp" alt="Dynamic Background Image" class="dynamicBackgroundPicture">
+            <img src="Images/AdventureCollection/BanffAdventureGameplay.webp"alt="Dynamic Background Image" class="dynamicBackgroundPicture">
+            <img src="Images/HorrorGameCollection/Gameplay.webp" alt="Dynamic Background Image" class="dynamicBackgroundPicture">
+            <img src="Images/PokerCollection/GameplayImage.webp" alt="Dynamic Background Image" class="dynamicBackgroundPicture">
+            <img src="Images/SimulationCollection/GameplayImage.webp" alt="Dynamic Background Image" class="dynamicBackgroundPicture">
+            
+       <!-- Left -->
+    <div id="coverOneContainer"> <!-- Have this change on tic (every 5 seconds)-->
+        <a href="MyProducts.html"><img src="Images/PuzzlePlatformCollection/Gameplay.webp" alt="Quote 1 Image"></a>
+        
+    </div>
+    <!-- Right -->
+    <div id="coverTwoContainer">
+        <a href="MyProducts.html"><img src="Images/HorrorGameCollection/Gameplay.webp" alt="Quote 3 Image"></a>
+        
+    </div>
+
+    <!-- Middle -->
+    <div id="coverThreeContainer">
+        <a href="MyProducts.html"><img src="Images/SimulationCollection/GameplayImage.webp" alt="Quote 3 Image"></a>
+       
+    </div>
+</div>
+    
+        <footer class="Container-Footer">
+            <div class="Element-Effects">
+                <a href="#" target="_blank"><img src="Images/FooterIcons/Facebook.jpg" alt="Facebook" class="footer-logo"></a>
+                <a href="#" target="_blank"><img src="Images/FooterIcons/Google.jpg" alt="Google+" class="footer-logo"></a>
+                <a href="#" target="_blank"><img src="Images/FooterIcons/Skype.jpg" alt="Skype" class="footer-logo"></a>
+                <a href="#" target="_blank"><img src="Images/FooterIcons/Instagram.jpg" alt="Instagram" class="footer-logo"></a>
+            </div>
+        </footer>
+        
+    </main>
+    
+    <script src="vanillaJS/script-Main.JS"></script>
+    <script src="vanillaJS/background-slider.js"></script>
+
+</body>
+
+</html>
