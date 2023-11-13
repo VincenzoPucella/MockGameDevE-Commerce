@@ -1,8 +1,9 @@
 ------------------------------------------------------------------
 Started 10/30/2023
 Hours worked on this project
-- Week one: 1.5 Hours, 3 Hours, 10 Hours,8 Hours, 1 Hour, 10 Hours
-- Week two: Thursday(1 Hour), Friday(5 Hours)
+- Week one: 1.5 Hours, 3 Hours, 10 Hours, 8 Hours, 1 Hour, 10 Hours
+- Week two: Thursday(1 Hour), Saturday(3 Hours), Sunday(1.5 Hours)
+- Week three: Monday(5 Hours)
 ------------------------------------------------------------------
 Project progression notes for Version_0.0 to Version_1.0
 
@@ -59,7 +60,7 @@ Invoice:
 These three HTML files are sharing CSS and JS script
 ---------------------------------------------------------------------
 
-11/10/2023
+11/11/2023
 
 Plan for today (3 Hours)
 
@@ -72,14 +73,7 @@ Was Successful? = (True/False)
 ---------------------------------------------------------------------
 
 
-11/11/2023 || 11/12/2023
 
-- Solve the problems from week One
-- Solve the problems from week two
-
-
-Was Successful? = (True/False)
-------------------------------------------------------------------
 
 
 

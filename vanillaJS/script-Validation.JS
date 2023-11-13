@@ -9,22 +9,22 @@ document.addEventListener("DOMContentLoaded", function() {
         const password = document.getElementById("password").value;
 
         if (username === "admin" && password === "1234") {
-            loginFormContainer.style.backgroundColor = "rgba(0, 255, 0, 0.3)"; // Light transparent green
-            document.body.classList.add('blurry-transition'); // Add blur transition to the body
+            loginFormContainer.style.backgroundColor = "rgba(0, 255, 0, 0.3)"; 
+            document.body.classList.add('blurry-transition'); 
 
             setTimeout(() => {
                 window.location.href = "Home.HTML";
             }, 2000);
         } else {
-            loginFormContainer.style.backgroundColor = "rgba(255, 0, 0, 0.3)"; // Light transparent red
-            loginFormContainer.classList.add("shake"); // Add shake effect
+            loginFormContainer.style.backgroundColor = "rgba(255, 0, 0, 0.3)"; 
+            loginFormContainer.classList.add("shake"); 
             document.getElementById("username").value = "";
             document.getElementById("password").value = "";
 
-            // Remove shake class after animation completes to allow re-triggering
+            
             setTimeout(() => {
                 loginFormContainer.classList.remove("shake");
-            }, 500); // 0.5s matches the animation duration
+            }, 500); 
         }
     });
 });

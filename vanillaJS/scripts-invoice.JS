@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     inputs.forEach(input => {
         input.addEventListener('blur', validateInput);
     });
+
+    // Get confirm button and add click event listener
+    const confirmButton = document.getElementById('confirm-button');
+    confirmButton.addEventListener('click', validateForm);
 });
 
 // Clear credit card info
@@ -31,8 +35,7 @@ function validateInput(event) {
         input.focus();
     }
 
-    // Additional specific validation can be added below
-    // For example:
+   
     if (input.id === 'card-number') {
         // Basic validation for credit card number to check if it's numeric and has 16 digits
         const cardNumberRegex = /^\d{16}$/;
@@ -92,57 +95,57 @@ function validateForm(event) {
 
     // Validate each input element with corresponding regex
     if (!validateInput(homeInput, addressRegex)) {
-        alert('Please enter a valid home address.');
+        showError(homeInput, 'Please enter a valid home address.');
         return;
     }
 
     if (!validateInput(address1Input, addressRegex)) {
-        alert('Please enter a valid address line 1.');
+        showError(address1Input, 'Please enter a valid address line 1.');
         return;
     }
 
     if (!validateInput(address2Input, addressRegex)) {
-        alert('Please enter a valid address line 2.');
+        showError(address2Input, 'Please enter a valid address line 2.');
         return;
     }
 
     if (!validateInput(cityInput, cityRegex)) {
-        alert('Please enter a valid city.');
+        showError(cityInput, 'Please enter a valid city.');
         return;
     }
 
     if (!validateInput(postalCodeInput, postalCodeRegex)) {
-        alert('Please enter a valid postal code.');
+        showError(postalCodeInput, 'Please enter a valid postal code.');
         return;
     }
 
     if (!validateInput(provinceInput, provinceRegex)) {
-        alert('Please enter a valid province.');
+        showError(provinceInput, 'Please enter a valid province.');
         return;
     }
 
     if (!validateInput(countryInput, countryRegex)) {
-        alert('Please enter a valid country.');
+        showError(countryInput, 'Please enter a valid country.');
         return;
     }
 
     if (!validateInput(cardNameInput, cardNameRegex)) {
-        alert('Please enter a valid name on card.');
+        showError(cardNameInput, 'Please enter a valid name on card.');
         return;
     }
 
     if (!validateInput(cardNumberInput, cardNumberRegex)) {
-        alert('Please enter a valid credit card number.');
+        showError(cardNumberInput, 'Please enter a valid credit card number.');
         return;
     }
 
     if (!validateInput(cvcInput, cvcRegex)) {
-        alert('Please enter a valid CVC.');
+        showError(cvcInput, 'Please enter a valid CVC.');
         return;
     }
 
     if (!validateInput(expirationInput, expirationRegex)) {
-        alert('Please enter a valid expiration date (MM/YY).');
+        showError(expirationInput, 'Please enter a valid expiration date (MM/YY).');
         return;
     }
 
@@ -154,6 +157,24 @@ function validateInput(input, regex) {
     return regex.test(input.value);
 }
 
-// Add event listener to form submit
-const form = document.querySelector('form');
-form.addEventListener('submit', validateForm);
+// Show error message
+function showError(input, message) {
+    // Create error message element
+    const errorMessage = document.createElement('span');
+    errorMessage.className = 'error-message';
+    errorMessage.innerText = message;
+
+    // Create error icon element
+    const errorIcon = document.createElement('i');
+    errorIcon.className = 'fas fa-exclamation-circle error-icon';
+
+    // Add error message and icon to parent element
+    const parentElement = input.parentElement;
+    parentElement.appendChild(errorMessage);
+    parentElement.appendChild(errorIcon);
+
+    // Add click event listener to error icon to focus on input
+    errorIcon.addEventListener('click', function() {
+        input.focus();
+    });
+}

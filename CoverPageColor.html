@@ -2,125 +2,134 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Home Page</title>
-    <link rel="stylesheet" href="css/styles-store.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Home Page</title>
+        <link rel="stylesheet" href="css/styles-store.css">
 </head>
 
 <body>
 
-    <!-- Background image that is blurred out -->
-    <header style="background-image: url('https://via.placeholder.com/150')">
-    </header>
+        <!-- Background image that is blurred out -->
+        <header style="background-image: url('https://via.placeholder.com/150')">
+        </header>
 
-    <!-- Create a textbox with a search button to navigate to my 6 containers -->
-    <div>
-        <input type="text" placeholder="Search...">
-        <button>Search</button>
-    </div>
+        <!-- Create a textbox with a search button to navigate to my 6 containers -->
+        <div>
+                <input type="text" placeholder="Search..." id="searchInput">
+                <button onclick="searchGames()">Search</button>
+        </div>
 
-    <!-- Create 6 containers -->
-    <div class="container-row">
-        <div class="container">
-            <img src="https://via.placeholder.com/150" alt="Container 1">
-            <p>Name: Container 1</p>
-            <p>Genre: Action</p>
-            <p>Price: $19.99</p>
-            <p>Description: Description for Container 1</p>
-            <button onclick="window.scrollTo(0,0)">Back to Top</button>
-            <button onclick="addToCart('Container 1', 19.99)">Add to Cart</button>
+        <!-- Create 6 containers -->
+        <div class="container-row" id="gameContainers">
+                <div class="container">
+                        <img src="Images/AdventureCollection/CoverPage.webp" alt="Container 1">
+                        <p>Name: Mysticay Quest</p>
+                        <p>Genre: Adventure</p>
+                        <p>Price: $5.99</p>
+                        <p>Description: Navigate the mysteries in the banff forest</p>
+                        <label for="quantity1">Quantity:</label>
+                        <select id="quantity1" name="quantity1">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                        </select>
+                        <button onclick="window.scrollTo(0,0)">Back to Top</button>
+                        <button onclick="addToCart('Container 1', 19.99, document.getElementById('quantity1').value)">Add to Cart</button>
+                </div>
+                <div class="container">
+                        <img src="Images/ChessFPSCollection/newFpsCover.webp" alt="Container 2">
+                        <p>Name: FPS chess</p>
+                        <p>Genre: First Person Shooter </p>
+                        <p>Price: $14.99</p>
+                        <p>Description: Out smart / Out aim your opponent</p>
+                        <label for="quantity2">Quantity:</label>
+                        <select id="quantity2" name="quantity2">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                        </select>
+                        <button onclick="window.scrollTo(0,0)">Back to Top</button>
+                        <button onclick="addToCart('Container 2', 24.99, document.getElementById('quantity2').value)">Add to Cart</button>
+                </div>
+                <div class="container">
+                        <img src="Images/PuzzlePlatformCollection/CoverPage.webp" alt="Container 3">
+                        <p>Name: Sale Shifters</p>
+                        <p>Genre: Puzzle Platformer </p>
+                        <p>Price: $14.99</p>
+                        <p>Description: Shifting map, Mind boggling puzzles!</p>
+                        <label for="quantity3">Quantity:</label>
+                        <select id="quantity3" name="quantity3">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                        </select>
+                        <button onclick="window.scrollTo(0,0)">Back to Top</button>
+                        <button onclick="addToCart('Container 3', 14.99, document.getElementById('quantity3').value)">Add to Cart</button>
+                </div>
+                <div class="container">
+                        <img src="Images/HorrorGameCollection/newHorrorCover.webp" alt="Container 4">
+                        <p>Name: Maze of Shadows</p>
+                        <p>Genre: Horror </p>
+                        <p>Price: $4.99</p>
+                        <p>Description: Survive longer then your friends</p>
+                        <label for="quantity4">Quantity:</label>
+                        <select id="quantity4" name="quantity4">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                        </select>
+                        <button onclick="window.scrollTo(0,0)">Back to Top</button>
+                        <button onclick="addToCart('Container 4', 29.99, document.getElementById('quantity4').value)">Add to Cart</button>
+                </div>
+                <div class="container">
+                        <img src="Images/PokerCollection/newPokerAlienCover.webp" alt="Container 5">
+                        <p>Name: Intergalatic Poker Face</p>
+                        <p>Genre: Card game</p>
+                        <p>Price: $1.99</p>
+                        <p>Description: Outplay the aliens to bring wealth and prosperity to humans</p>
+                        <label for="quantity5">Quantity:</label>
+                        <select id="quantity5" name="quantity5">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                        </select>
+                        <button onclick="window.scrollTo(0,0)">Back to Top</button>
+                        <button onclick="addToCart('Container 5', 39.99, document.getElementById('quantity5').value)">Add to Cart</button>
+                </div>
+                <div class="container">
+                        <img src="Images/SimulationCollection/newGameCover.webp" alt="Container 6">
+                        <p>Name: Harmony of Elements </p>
+                        <p>Genre: Simulation</p>
+                        <p>Price: $2.99</p>
+                        <p>Description: Find out which skill would strive in an apocalyse</p>
+                        <label for="quantity6">Quantity:</label>
+                        <select id="quantity6" name="quantity6">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                        </select>
+                        <button onclick="window.scrollTo(0,0)">Back to Top</button>
+                        <button onclick="addToCart('Container 6', 34.99, document.getElementById('quantity6').value)">Add to Cart</button>
+                </div>
+
         </div>
-        <div class="container">
-            <img src="https://via.placeholder.com/150" alt="Container 2">
-            <p>Name: Container 2</p>
-            <p>Genre: Adventure</p>
-            <p>Price: $24.99</p>
-            <p>Description: Description for Container 2</p>
-            <button onclick="window.scrollTo(0,0)">Back to Top</button>
-            <button onclick="addToCart('Container 2', 24.99)">Add to Cart</button>
-        </div>
-        <div class="container">
-            <img src="https://via.placeholder.com/150" alt="Container 3">
-            <p>Name: Container 3</p>
-            <p>Genre: Puzzle</p>
-            <p>Price: $14.99</p>
-            <p>Description: Description for Container 3</p>
-            <button onclick="window.scrollTo(0,0)">Back to Top</button>
-            <button onclick="addToCart('Container 3', 14.99)">Add to Cart</button>
-        </div>
-        <div class="container">
-            <img src="https://via.placeholder.com/150" alt="Container 4">
-            <p>Name: Container 4</p>
-            <p>Genre: Racing</p>
-            <p>Price: $29.99</p>
-            <p>Description: Description for Container 4</p>
-            <button onclick="window.scrollTo(0,0)">Back to Top</button>
-            <button onclick="addToCart('Container 4', 29.99)">Add to Cart</button>
-        </div>
-        <div class="container">
-            <img src="https://via.placeholder.com/150" alt="Container 5">
-            <p>Name: Container 5</p>
-            <p>Genre: Sports</p>
-            <p>Price: $39.99</p>
-            <p>Description: Description for Container 5</p>
-            <button onclick="window.scrollTo(0,0)">Back to Top</button>
-            <button onclick="addToCart('Container 5', 39.99)">Add to Cart</button>
-        </div>
-        <div class="container">
-            <img src="https://via.placeholder.com/150" alt="Container 6">
-            <p>Name: Container 6</p>
-            <p>Genre: Strategy</p>
-            <p>Price: $34.99</p>
-            <p>Description: Description for Container 6</p>
-            <button onclick="window.scrollTo(0,0)">Back to Top</button>
-            <button onclick="addToCart('Container 6', 34.99)">Add to Cart</button>
-        </div>
-    </div>
+
+        <button onclick="redirectToInvoice()">Checkout</button>
+
+
+      
+           
 
     
-    <script>
-        // Step 1
-        let cart = [];
-
-        function addToCart(name, price) {
-            // Step 2
-            cart.push({name, price});
-
-            // Step 4
-            displayTotalPrice();
-            displayCartItems();
-        }
-
-        // Step 3
-        function calculateTotalPrice() {
-            let totalPrice = 0;
-            for (let i = 0; i < cart.length; i++) {
-                totalPrice += cart[i].price;
-            }
-            return totalPrice;
-        }
-
-        // Step 5
-        function displayCartItems() {
-            let cartItems = "";
-            for (let i = 0; i < cart.length; i++) {
-                cartItems += `<p>${cart[i].name}: $${cart[i].price}</p>`;
-            }
-            document.getElementById("cart-items").innerHTML = cartItems;
-        }
-
-        // Step 4
-        function displayTotalPrice() {
-            let totalPrice = calculateTotalPrice();
-            document.getElementById("total-price").innerHTML = `Total Price: $${totalPrice}`;
-        }
-    </script>
-
-    
-
-    <!-- Add a link to a new JS file called script_store.JS -->
-    <script src="js/script_store.js"></script>
+        <!-- Add a link to a new JS file called script_store.JS -->
+        <script src="js/script_store.js"></script>
 
 </body>
 

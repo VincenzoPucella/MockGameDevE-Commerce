@@ -1,7 +1,6 @@
-Now that i tried making a website, I want this new version of my application to focus on making it easy for my to constantly change my website
+- With this current version of my web app, it is to difficult to   maintain in the long term
 
-Here is my gameplan to make my Version1.0 and turn it into Version2.0
-
+- Here is my gameplan to make my Version1.0 and turn it into Version2.0
 
 1) Create seperate CSS / JS files dedicated to the header / footer
 2) Create a CSS script / JS script for Animations / Interactions in the    web 

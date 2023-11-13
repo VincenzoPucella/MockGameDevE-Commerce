@@ -1,6 +1,5 @@
 /* styles-store.css */
 
-/* Add a bit of padding and define a max-width for the overall layout */
 body {
     margin: 0;
     padding: 20px;
@@ -8,7 +7,7 @@ body {
     margin: auto;
 }
 
-/* Basic styles for the header, including the blurred background image */
+
 header {
     height: 250px;
     background-image: url('https://via.placeholder.com/150');
@@ -17,40 +16,38 @@ header {
     filter: blur(8px);
 }
 
-/* Style the search box */
 div > input[type="text"],
 div > button {
     margin: 10px 0;
 }
 
-/* Set up the flex container */
+
 .container-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Spacing between containers */
-    justify-content: center; /* Center the containers in the row */
+    gap: 20px; 
+    justify-content: center; 
 }
 
-/* Style each container */
+
 .container {
-    flex-basis: calc(50% - 20px); /* Calculate the width for 2 containers per row, subtracting the gap */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for some depth */
-    margin-bottom: 20px; /* Spacing between rows */
-    background: #ffffff; /* Background color for the containers */
-    padding: 10px; /* Padding inside the containers */
+    flex-basis: calc(50% - 20px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
+    background: #ffffff; 
+    padding: 10px; 
 }
 
-/* Media query for larger screens for 3 columns */
+
 @media screen and (min-width: 768px) {
     .container {
-        flex-basis: calc(33.333% - 20px); /* Adjust to 3 containers per row on larger screens */
+        flex-basis: calc(33.333% - 20px); 
     }
 }
 
-/* Style the images to be responsive within their containers */
 .container img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 10px; /* Spacing between the image and the text */
+    margin-bottom: 10px; 
 }
